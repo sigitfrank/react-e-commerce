@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { listProduct } from '../actions/productAction'
 function HomeScreen() {
     const dispatch = useDispatch()
-    const productList = useSelector(state => state.productList)
+    const productList = useSelector(state => state.productListing)
     const {loading, error, products} = productList
     useEffect(() => {
         dispatch(listProduct())
@@ -21,7 +21,6 @@ function HomeScreen() {
                     ))}
                 </div>
                 )}
-
         </div>
 
     )

@@ -1,12 +1,13 @@
 import { compose, applyMiddleware, createStore, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
-import { productListReducer } from "./reducers/productReducer"
+import { productDetailsReducer, productListReducer } from "./reducers/productReducer"
 const initializeState = {}
 
 // put state productList, it will catch by useSelector in HomeScreen.js
 // reducer which contains if else or switch case based on state progress
 const reducer = combineReducers({
-    productList: productListReducer,
+    productListing: productListReducer,
+    productDetailing: productDetailsReducer,
 })
 
 // to connect redux dev tools with browser
